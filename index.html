@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+		<link href="/styles/shb.css" rel="stylesheet">
+		<script src="/scripts/shb.min.js" type="text/javascript"></script>
+		
+		<title>SHB Example</title>
+	<head>
+	<body>
+	  <main class="container">
+			<article class="row">
+			  <section class="col-md-12 col-sm-12">
+			    <p>Example of SHB.js. See more at <a href="http://ostr.io/code/html-social-like-share-buttons-no-javascript.html">How to Social Buttons in HTML only using Twitter Bootstrap 3 and Font Awesome Icons (No Javascript)</a>.</p>
+			    <p>The SHB.js script build on the fly HTML social buttons, which based on Twitter Bootstrap 3 markup ant Font Awesome icons.</p>
+			    <hr>
+			    <center>
+			      <p>Build All Default Buttons</p>
+			      <div class="btn-group" id="shb"></div>
+          </center>
+<pre><code>SHB.build('shb');</code></pre>
+			    <hr>
+			    <center>
+			      <p>Build All Default Buttons with custom size</p>
+			      <div class="btn-group" id="shb_options"></div>
+            </center>
+<pre><code>SHB.build({
+  elementID: 'shb_otions',
+  
+  pref: {
+  	btnSizeClass: 'btn-sm',
+  }
+});</code></pre>
+			    <hr>
+			    <center>
+			      <p>Build Some of Default Buttons And One Custom (GitHub)</p>
+			      <div class="btn-group" id="shb_custom"></div>
+          </center>
+<pre><code>SHB.build({
+  elementID: 'shb_custom',
+	buttons: {
+  	fbLike: true,
+		tweet: true,
+  	plusOne: true,
+		surf: true,
+  
+  	customButton: {
+  		iconClass: 'fa-github',
+  		iconURL: 'https://github.com/dr-dimitru',
+  		iconParams: {} 
+  	},
+	}
+});</code></pre>
+			    <hr>
+			  </section>
+			</article>
+		</main>
+		
+  	<script type="text/javascript">
+  		//Build All Default Buttons
+  		SHB.build('shb');
+  		
+  		//Build All Default Buttons with custom size
+  		SHB.build({
+  			elementID: 'shb_otions',
+  
+  			pref: {
+  				btnSizeClass: 'btn-sm',
+  			}
+  		});
+  		
+  		//Build Some of Default Buttons And One Custom (GitHub)
+  		SHB.build({
+  		 	elementID: 'shb_custom',
+  		 	buttons: {
+  		 		fbLike: true,
+  		 		tweet: true,
+  		 		//fbShare: true,
+  		 		plusOne: true,
+  		 		//plusShare: true,
+  		 		//linkedInShare: true,
+  		 		//vkShare: true,
+  		 		//pinterest: true,
+  	  		surf: true,
+  
+  		 		customButton: {
+  		 			iconClass: 'fa-github',
+  		 			iconURL: 'https://github.com/dr-dimitru',
+  		 			iconParams: {} 
+  		 		},
+  			}
+  		 });
+  	</script>
+	</body>
+</html>
