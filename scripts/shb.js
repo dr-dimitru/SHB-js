@@ -1,247 +1,247 @@
 (function(){
 
-			"use strict";
-
-			window.SHB = {
-
-				getMeta: function(tag){
-
-					var metas = document.getElementsByTagName('meta'); 
-
-					for (var i=0; i<metas.length; i++) { 
-						if (metas[i].getAttribute("name") == tag) { 
-							return metas[i].getAttribute("content"); 
-						} 
-					} 
-
-					return "";
-				},
-
-				init: function(){
-
-					this.defaults.desc = this.getMeta('description');
-					this.defaults.img = this.getMeta('image');
-				},
-
-				defaults: {
-
-					btnTitle: 'Share via ',
-					btnTag: 'a',
-					btnLinkAttr: 'href',
-					btnClass: 'btn btn-default', //Default TWBS Class
-					btnSizeClass: '', // empty | btn-sm | btn-lg | btn-xs
-					shareBtnText: 'Share:', //String
-					url: window.location.href,
-					iconClass: 'fa',
-					iconSize: 'fa-lg',
-					twitterName: '', //Your website's Twitter Account
-					title: document.title,
-				},
-
-				buttons: {
-
-					fbLike: {
-
-						iconClass: 'fa-thumbs-o-up fb',
-						iconURL: 'http://www.facebook.com/plugins/like.php',
-						iconParams: {
-							url: 'href',
-						} 
-					},
-
-					fbShare: {
-
-						iconClass: 'fa-facebook fb',
-						iconURL: 'http://www.facebook.com/sharer.php',
-						iconParams: {
-							url: 'u',
-							desc: 't',
-						} 
-					},
-
-					tweet: {
-
-						iconClass: 'fa-twitter tw',
-						iconURL: 'http://twitter.com/share',
-						iconParams: {
-							url: 'url',
-							desc: 'text',
-							twitterName: 'via',
-						} 
-					},
-
-					plusOne: {
-
-						btnClass: 'google-plus-one',
-						iconHTML: '<span class="google">1</span>',
-						iconClass: 'fa-google-plus google',
-						iconURL: 'https://apis.google.com/_/+1/fastbutton',
-						iconSize: 'fa-2x',
-						iconParams: {
-							url: 'url',
-							other: { 
-								hl: 'en',
-								usegapi: '1',
-								size: 'standard',
-							}
-						} 
-					},
+   "use strict";
+
+   window.SHB = {
+
+    getMeta: function(tag){
+
+     var metas = document.getElementsByTagName('meta'); 
+
+     for (var i=0; i<metas.length; i++) { 
+      if (metas[i].getAttribute("name") == tag) { 
+       return metas[i].getAttribute("content"); 
+      } 
+     } 
+
+     return "";
+    },
+
+    init: function(){
+
+     this.defaults.desc = this.getMeta('description');
+     this.defaults.img = this.getMeta('image');
+    },
+
+    defaults: {
+
+     btnTitle: 'Share via ',
+     btnTag: 'a',
+     btnLinkAttr: 'href',
+     btnClass: 'btn btn-default', //Default TWBS Class
+     btnSizeClass: '', // empty | btn-sm | btn-lg | btn-xs
+     shareBtnText: 'Share:', //String
+     url: window.location.href,
+     iconClass: 'fa',
+     iconSize: 'fa-lg',
+     twitterName: '', //Your website's Twitter Account
+     title: document.title,
+    },
+
+    buttons: {
+
+     fbLike: {
+
+      iconClass: 'fa-thumbs-o-up fb',
+      iconURL: 'http://www.facebook.com/plugins/like.php',
+      iconParams: {
+       url: 'href',
+      } 
+     },
+
+     fbShare: {
+
+      iconClass: 'fa-facebook fb',
+      iconURL: 'http://www.facebook.com/sharer.php',
+      iconParams: {
+       url: 'u',
+       desc: 't',
+      } 
+     },
+
+     tweet: {
+
+      iconClass: 'fa-twitter tw',
+      iconURL: 'http://twitter.com/share',
+      iconParams: {
+       url: 'url',
+       desc: 'text',
+       twitterName: 'via',
+      } 
+     },
+
+     plusOne: {
+
+      btnClass: 'google-plus-one',
+      iconHTML: '<span class="google">1</span>',
+      iconClass: 'fa-google-plus google',
+      iconURL: 'https://apis.google.com/_/+1/fastbutton',
+      iconSize: 'fa-2x',
+      iconParams: {
+       url: 'url',
+       other: { 
+        hl: 'en',
+        usegapi: '1',
+        size: 'standard',
+       }
+      } 
+     },
 
-					plusShare: {
+     plusShare: {
 
-						iconClass: 'fa-google-plus google',
-						iconURL: 'https://plus.google.com/share',
-						iconParams: {
-							url: 'url',
-						} 
-					},
+      iconClass: 'fa-google-plus google',
+      iconURL: 'https://plus.google.com/share',
+      iconParams: {
+       url: 'url',
+      } 
+     },
 
-					linkedInShare: {
+     linkedInShare: {
 
-						iconClass: 'fa-linkedin linkin',
-						iconURL: 'http://www.linkedin.com/shareArticle',
-						iconParams: {
-							url: 'url',
-						} 
-					},
+      iconClass: 'fa-linkedin linkin',
+      iconURL: 'http://www.linkedin.com/shareArticle',
+      iconParams: {
+       url: 'url',
+      } 
+     },
 
-					vkShare: {
+     vkShare: {
 
-						iconClass: 'fa-vk vk',
-						iconURL: 'http://vk.com/share.php',
-						iconParams: {
-							url: 'url',
-							title: 'title',
-							desc: 'description',
-							img: 'image',
-						} 
-					},
+      iconClass: 'fa-vk vk',
+      iconURL: 'http://vk.com/share.php',
+      iconParams: {
+       url: 'url',
+       title: 'title',
+       desc: 'description',
+       img: 'image',
+      } 
+     },
 
-					pinterest: {
+     pinterest: {
 
-						iconClass: 'fa-pinterest pinterest',
-						iconURL: 'http://www.pinterest.com/pin/create/button/',
-						iconParams: {
-							url: 'url',
-							title: 'title',
-							desc: 'description',
-							img: 'media',
-						} 
-					},
+      iconClass: 'fa-pinterest pinterest',
+      iconURL: 'http://www.pinterest.com/pin/create/button/',
+      iconParams: {
+       url: 'url',
+       title: 'title',
+       desc: 'description',
+       img: 'media',
+      } 
+     },
 
-					surf: {
+     surf: {
 
-						iconClass: 'surfingbird',
-						iconURL: 'http://surfingbird.ru/share',
-						iconParams: {
-							url: 'url',
-							title: 'title',
-							desc: 'description',
-							img: 'screenshot',
-						} 
-					},
+      iconClass: 'surfingbird',
+      iconURL: 'http://surfingbird.ru/share',
+      iconParams: {
+       url: 'url',
+       title: 'title',
+       desc: 'description',
+       img: 'screenshot',
+      } 
+     },
 
-				},
+    },
 
-				build: function(conf){
+    build: function(conf){
 
-					this.init();
+     this.init();
 
-					if(typeof conf == 'string'){
+     if(typeof conf == 'string'){
 
-						this.container = document.getElementById(conf);
-						this.toBuild = this.prepareBtnConf(this.buttons);
+      this.container = document.getElementById(conf);
+      this.toBuild = this.prepareBtnConf(this.buttons);
 
-					}else{
+     }else{
 
-						this.container = document.getElementById(conf.elementID);
-						var buttons = (typeof conf.buttons == 'object') ? conf.buttons : '*';
+      this.container = document.getElementById(conf.elementID);
+      var buttons = (typeof conf.buttons == 'object') ? conf.buttons : '*';
 
-						if(buttons === '*'){
+      if(buttons === '*'){
 
-							this.toBuild = this.prepareBtnConf(this.buttons);
+       this.toBuild = this.prepareBtnConf(this.buttons);
 
-						}else{
+      }else{
 
-							this.toBuild = this.prepareBtnConf(conf.buttons);
-						}
+       this.toBuild = this.prepareBtnConf(conf.buttons);
+      }
 
-						if(typeof conf.pref == 'object'){
+      if(typeof conf.pref == 'object'){
 
-							for (var index in conf.pref) {
-								
-								this.defaults[index] = (typeof conf.pref[index] == 'string') ? conf.pref[index] : this.defaults[index];
-							};
-						}
-					}
+       for (var index in conf.pref) {
+        
+        this.defaults[index] = (typeof conf.pref[index] == 'string') ? conf.pref[index] : this.defaults[index];
+       };
+      }
+     }
 
-					return this.btn();
-				},
+     return this.btn();
+    },
 
 
-				btn: function(){
+    btn: function(){
 
-					for(var index in this.toBuild){
+     for(var index in this.toBuild){
 
-						var link = '';
+      var link = '';
 
-						for(var ind in this.toBuild[index].iconParams){
+      for(var ind in this.toBuild[index].iconParams){
 
-							if(ind == 'other'){
+       if(ind == 'other'){
 
-								for(var indx in this.toBuild[index].iconParams[ind]){
+        for(var indx in this.toBuild[index].iconParams[ind]){
 
-									link = link + '' + indx + '=' + encodeURIComponent(this.toBuild[index].iconParams[ind][indx]) + '&';
-								}
+         link = link + '' + indx + '=' + encodeURIComponent(this.toBuild[index].iconParams[ind][indx]) + '&';
+        }
 
-							}else{
+       }else{
 
-								link = link + '' + this.toBuild[index].iconParams[ind] + '=' + encodeURIComponent(this.defaults[ind]) + '&';
-							}
-						}
+        link = link + '' + this.toBuild[index].iconParams[ind] + '=' + encodeURIComponent(this.defaults[ind]) + '&';
+       }
+      }
 
-						var b = document.createElement(this.defaults.btnTag);
-						var bClass = (typeof this.toBuild[index].btnClass == 'string') ? this.toBuild[index].btnClass + ' ' + this.defaults.btnClass : this.defaults.btnClass;
-						b.setAttribute(this.defaults.btnLinkAttr, this.toBuild[index].iconURL + '?' + link);
-						b.setAttribute('class', bClass + ' ' + this.defaults.btnSizeClass);
+      var b = document.createElement(this.defaults.btnTag);
+      var bClass = (typeof this.toBuild[index].btnClass == 'string') ? this.toBuild[index].btnClass + ' ' + this.defaults.btnClass : this.defaults.btnClass;
+      b.setAttribute(this.defaults.btnLinkAttr, this.toBuild[index].iconURL + '?' + link);
+      b.setAttribute('class', bClass + ' ' + this.defaults.btnSizeClass);
 
-						var size = (typeof this.toBuild[index].iconSize == 'string') ? this.toBuild[index].iconSize : this.defaults.iconSize;
-						var i = document.createElement('i');
-						i.setAttribute('class', size + ' ' + this.toBuild[index].iconClass + ' ' + this.defaults.iconClass);
+      var size = (typeof this.toBuild[index].iconSize == 'string') ? this.toBuild[index].iconSize : this.defaults.iconSize;
+      var i = document.createElement('i');
+      i.setAttribute('class', size + ' ' + this.toBuild[index].iconClass + ' ' + this.defaults.iconClass);
 
-						if(typeof this.toBuild[index].iconHTML == 'string'){
+      if(typeof this.toBuild[index].iconHTML == 'string'){
 
-							b.innerHTML = this.toBuild[index].iconHTML; 
-						}
+       b.innerHTML = this.toBuild[index].iconHTML; 
+      }
 
-						b.appendChild(i);
-						this.container.appendChild(b);
-					}
+      b.appendChild(i);
+      this.container.appendChild(b);
+     }
 
-					return this.container;
-				},
+     return this.container;
+    },
 
-				prepareBtnConf: function(btn){
+    prepareBtnConf: function(btn){
 
-					var b = {};
+     var b = {};
 
-					for (var index in btn) {
+     for (var index in btn) {
 
-						if(typeof this.buttons[index] == 'object'){
-							
-							b[index] = this.buttons[index];
-									
-							b[index].iconClass = (typeof btn[index].iconClass === 'object') ? btn[index].iconClass : this.buttons[index].iconClass;
-							b[index].iconURL = (typeof btn[index].iconURL === 'object') ? btn[index].iconURL : this.buttons[index].iconURL;
-							b[index].iconParams = (typeof btn[index].iconParams === 'object') ? btn[index].iconParams : this.buttons[index].iconParams;
-							b[index].iconSize = (typeof btn[index].iconSize === 'object') ? btn[index].iconSize : this.buttons[index].iconSize;
-						}else{
+      if(typeof this.buttons[index] == 'object'){
+       
+       b[index] = this.buttons[index];
+         
+       b[index].iconClass = (typeof btn[index].iconClass === 'object') ? btn[index].iconClass : this.buttons[index].iconClass;
+       b[index].iconURL = (typeof btn[index].iconURL === 'object') ? btn[index].iconURL : this.buttons[index].iconURL;
+       b[index].iconParams = (typeof btn[index].iconParams === 'object') ? btn[index].iconParams : this.buttons[index].iconParams;
+       b[index].iconSize = (typeof btn[index].iconSize === 'object') ? btn[index].iconSize : this.buttons[index].iconSize;
+      }else{
 
-							b[index] = btn[index];
-						}
-					};
+       b[index] = btn[index];
+      }
+     };
 
-					return b;
-				}
-			}
-		})();
+     return b;
+    }
+  }
+})();
