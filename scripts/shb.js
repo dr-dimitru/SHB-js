@@ -19,8 +19,19 @@
 
     init: function(){
 
+     if(typeof this.orig !== 'object'){
+      this.orig = {};
+      this.orig.defaults = this.defaults;
+      this.orig.buttons = this.buttons;
+     }
      this.defaults.desc = this.getMeta('description');
      this.defaults.img = this.getMeta('image');
+    },
+
+    reset: function(){
+
+     this.defaults = this.orig.defaults;
+     this.buttons = this.orig.buttons;
     },
 
     defaults: {
@@ -218,6 +229,8 @@
       this.container.appendChild(b);
      }
 
+     this.reset();
+
      return this.container;
     },
 
@@ -243,5 +256,5 @@
 
      return b;
     }
-  }
-})();
+   }
+  })();
