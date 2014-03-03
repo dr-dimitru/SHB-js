@@ -43,14 +43,14 @@ SHB.build({
   
 	buttons: {
 		fbLike: true,
-  	tweet: true,
-    plusOne: true,
-    surf: true,
-  
-    customButton: {
-  		 iconClass: 'fa-github',
-  		 iconURL: 'https://github.com/dr-dimitru',
-  		 iconParams: {} 
+		tweet: true,
+		plusOne: true,
+		surf: true,
+		
+		customButton: {
+			iconClass: 'fa-github',
+			iconURL: 'https://github.com/dr-dimitru',
+			iconParams: {} 
   	},
   }
 });
