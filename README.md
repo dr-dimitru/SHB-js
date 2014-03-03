@@ -36,9 +36,11 @@ SHB.build({options});
 /*Load some buttons and Create Custom Button and small size of buttons*/
 SHB.build({
   elementID: 'shb_custom',
+  
   pref: {
-  	btnSizeClass: 'btn-sm',
-	},
+		btnSizeClass: 'btn-sm',
+  },
+  
 	buttons: {
 		fbLike: true,
   	tweet: true,
