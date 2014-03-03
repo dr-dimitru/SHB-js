@@ -4,6 +4,8 @@ SHB-js
 Social HTML Buttons
 Example of SHB.js. See more at [How to Social Buttons in HTML only using Twitter Bootstrap 3 and Font Awesome Icons (No Javascript)](http://ostr.io/code/html-social-like-share-buttons-no-javascript.html)
 
+See [CodePen.io Example](http://codepen.io/OstrIO/pen/tHvui)
+
 ======
 
 ###Usage
