@@ -213,7 +213,9 @@
 
       var b = document.createElement(this.defaults.btnTag);
       var bClass = (typeof this.toBuild[index].btnClass == 'string') ? this.toBuild[index].btnClass + ' ' + this.defaults.btnClass : this.defaults.btnClass;
-      b.setAttribute(this.defaults.btnLinkAttr, this.toBuild[index].iconURL + '?' + link);
+      
+      var linkStartsWith = (this.toBuild[index].iconURL.indexOf('?') !== -1) ? '&' : '?';
+      b.setAttribute(this.defaults.btnLinkAttr, this.toBuild[index].iconURL + linkStartsWith + link);
       b.setAttribute('class', bClass + ' ' + this.defaults.btnSizeClass);
 
       var size = (typeof this.toBuild[index].iconSize == 'string') ? this.toBuild[index].iconSize : this.defaults.iconSize;
