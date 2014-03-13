@@ -217,6 +217,7 @@
       var linkStartsWith = (this.toBuild[index].iconURL.indexOf('?') !== -1) ? '&' : '?';
       b.setAttribute(this.defaults.btnLinkAttr, this.toBuild[index].iconURL + linkStartsWith + link);
       b.setAttribute('class', bClass + ' ' + this.defaults.btnSizeClass);
+      b.setAttribute('target', '_blank');
 
       var size = (typeof this.toBuild[index].iconSize == 'string') ? this.toBuild[index].iconSize : this.defaults.iconSize;
       var i = document.createElement('i');
