@@ -2,20 +2,20 @@ SHB-js
 ======
 
 Social HTML Buttons
-Example of SHB.js. See more at [How to Social Buttons in HTML only using Twitter Bootstrap 3 and Font Awesome Icons (No Javascript)](http://ostr.io/code/html-social-like-share-buttons-no-javascript.html)
+Example of SHB.js. See more at [Social HTML-only Buttons (No Javascript)](https://veliovgroup.com/article/QTA2494eT8ThrqcZi)
 
-[![ScreenShot](http://ostr.io/img/SHBscreenshot.png)](http://codepen.io/OstrIO/pen/tHvui)
+[![ScreenShot](https://veliovgroup.com/cdn/storage/PostsFiles/ja4XHnZbTjqn92st3/big/ja4XHnZbTjqn92st3.png)](http://codepen.io/OstrIO/pen/tHvui)
 
 See [CodePen.io Example](http://codepen.io/OstrIO/pen/tHvui)
 
 ======
 
 ###Usage
-```
+```javascript
 SHB.build('elementID');
 ```
 
-```
+```javascript
 SHB.build({options});
 ```
 
@@ -36,7 +36,7 @@ SHB.build({options});
     - img: string | Shareable image | default: document.head.meta(name=image)
  
 
-```
+```javascript
 /*Load some buttons and Create Custom Button and small size of buttons*/
 SHB.build({
   elementID: 'shb_custom',
@@ -62,7 +62,7 @@ SHB.build({
 
 
 ###Example
-```
+```html
 <head>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
