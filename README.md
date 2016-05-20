@@ -4,7 +4,7 @@ SHB-js
 Social HTML Buttons
 Example of SHB.js. See more at [Social HTML-only Buttons (No Javascript)](https://veliovgroup.com/article/QTA2494eT8ThrqcZi)
 
-[![ScreenShot](https://veliovgroup.com/cdn/storage/PostsFiles/ja4XHnZbTjqn92st3/big/ja4XHnZbTjqn92st3.png)](http://codepen.io/OstrIO/pen/tHvui)
+[![ScreenShot](https://veliovgroup.com/uploads/big-yHsFfEQdXHNXqmJ7r.png)](http://codepen.io/OstrIO/pen/tHvui)
 
 See [CodePen.io Example](http://codepen.io/OstrIO/pen/tHvui)
 
