@@ -6,7 +6,9 @@ Example of SHB.js. See more at [Social HTML-only Buttons (No Javascript)](https:
 
 [![ScreenShot](https://veliovgroup.com/uploads/big-yHsFfEQdXHNXqmJ7r.png)](http://codepen.io/OstrIO/pen/tHvui)
 
-See [CodePen.io Example](http://codepen.io/OstrIO/pen/tHvui)
+Links:
+ - [CodePen.io Example](http://codepen.io/OstrIO/pen/tHvui)
+ - [Read Article](https://veliovgroup.com/article/QTA2494eT8ThrqcZi/social-share-buttons)
 
 ======
 
